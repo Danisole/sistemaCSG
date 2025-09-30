@@ -1,0 +1,194 @@
+	  * {
+    
+		box-sizing: border-box;
+		}
+	body,
+		html
+		{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            /* background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url("/img/carousel-1.jpeg") no-repeat center center fixed;
+            background-size: cover; */
+			;
+        }
+		.body_login{
+			background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url("/img/carousel-1.jpeg") no-repeat center center fixed;
+            background-size: cover;
+		}
+
+		
+		.user_card {
+			height: 400px;
+			width: 350px;
+			margin-top: auto;
+			margin-bottom: auto;
+			background: #ffffff;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			padding: 10px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			border-radius: 5px;
+
+		}
+		.brand_logo_container {
+			position: absolute;
+			height: 170px;
+			width: 170px;
+			top: -75px;
+			border-radius: 50%;
+			background: #ffffff;
+            border: 4px solid #FF2869;
+			padding: 10px;
+			text-align: center;
+		}
+        .brand_logo_container img {
+            max-width: 100px;  /* ancho máximo */
+            height: auto;      /* mantiene proporción */
+        }
+		.brand_logo {
+			height: 150px;
+			width: 150px;
+			border-radius: 50%;
+			border: 2px solid white;
+		}
+
+			
+		
+		.form_container {
+
+			margin-top: 100px;
+		}
+		.login_btn {
+			width: 100%;
+			background: #FF2869 !important;
+			color: white !important;
+		}
+		.login_btn:focus {
+			box-shadow: none !important;
+			outline: 0px !important;
+		}
+		.login_container {
+			padding: 0 2rem;
+		}
+		.input-group-text {
+			background: #FF2869 !important;
+			color: white !important;
+			border: 0 !important;
+			border-radius: 0.25rem 0 0 0.25rem !important;
+		}
+		.input_user,
+		.input_pass:focus {
+			box-shadow: none !important;
+			outline: 0px !important;
+		}
+		.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+			background-color: #FF2869 !important;
+		}
+
+		/* pacientes form		 */
+
+		.h3_form_pacientes{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-top: 30px;
+			color: gray;
+
+		}
+
+		.formbold-mb-5 {
+			margin-bottom: 20px;
+			
+		}
+		.formbold-pt-3 {
+			padding-top: 12px;
+		}
+		.formbold-main-wrapper {
+			display: flex;
+			
+			align-items: center;
+			justify-content: center;
+			padding: 48px;
+		}
+
+		.formbold-form-wrapper {
+			margin: 0 auto;
+			max-width: 550px;
+			width: 100%;
+			/* background: white; */
+		}
+		.formbold-form-label {
+			display: block;
+			font-weight: 500;
+			font-size: 16px;
+			color: #FF2869;
+			margin-bottom: 12px;
+		}
+		.formbold-form-label-2 {
+			font-weight: 600;
+			font-size: 20px;
+			margin-bottom: 20px;
+		}
+
+		.formbold-form-input {
+			width: 100%;
+			padding: 12px 24px;
+			border-radius: 6px;
+			border: 1px solid #e0e0e0;
+			background: white;
+			font-weight: 500;
+			font-size: 16px;
+			color: #6b7280;
+			outline: none;
+			resize: none;
+		}
+		.formbold-form-input:focus {
+			border-color: #FF2869;
+			box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+		}
+
+		.formbold-btn {
+			text-align: center;
+			font-size: 16px;
+			border-radius: 6px;
+			padding: 14px 32px;
+			border: none;
+			font-weight: 600;
+			background-color: #FF2869;
+			color: white;
+			width: 100%;
+			cursor: pointer;
+		}
+		.formbold-btn:hover {
+			box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+		}
+
+		.formbold--mx-3 {
+			margin-left: -12px;
+			margin-right: -12px;
+		}
+		.formbold-px-3 {
+			padding-left: 12px;
+			padding-right: 12px;
+		}
+		.flex {
+			display: flex;
+		}
+		.flex-wrap {
+			flex-wrap: wrap;
+		}
+		.w-full {
+			width: 100%;
+		}
+		@media (min-width: 540px) {
+			.sm\:w-half {
+			width: 50%;
+			}
+		}
