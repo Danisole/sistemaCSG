@@ -40,142 +40,101 @@
                 <a class="nav-link" href="#">Cerrar sesion</a>
               </li>
             </ul>
-
             <!--registro de pacientes  -->
-
         </div>
     </div>
 </div>
 </nav>
 
-<h3 class="h3_form_pacientes">Administración de Pacientes</h3>
-            <div class="formbold-main-wrapper">
+<div class="container my-4">
+  <h5 class="mb-3">Datos Personales</h5>
+  <form class="row g-3">
 
-            <div class="formbold-form-wrapper">
-                <form action="https://formbold.com/s/FORM_ID" method="POST">
-                <div class="formbold-mb-5">
-                    <label for="name" class="formbold-form-label"> Apellido y Nombre </label>
-                    <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    placeholder="Apellido y Nombre"
-                    class="formbold-form-input"
-                    />
-                </div>
-                <div class="formbold-mb-5">
-                    <label for="dni" class="formbold-form-label"> Documento </label>
-                    <input
-                    type="number"
-                    name="name"
-                    id="name"
-                    placeholder="Documento"
-                    class="formbold-form-input"
-                    />
-                </div>
-                <div class="formbold-mb-5">
-                    <label for="phone" class="formbold-form-label"> Telefono </label>
-                    <input
-                    type="number"
-                    name="phone"
-                    id="phone"
-                    placeholder="Numero de telefono"
-                    class="formbold-form-input"
-                    />
-                </div>
-                <div class="formbold-mb-5">
-                    <label for="email" class="formbold-form-label"> Email </label>
-                    <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="Ingrese email"
-                    class="formbold-form-input"
-                    />
-                </div>
-                <div class="flex flex-wrap formbold--mx-3">
-                    <div class="w-full sm:w-half formbold-px-3">
-                    <div class="formbold-mb-5 w-full">
-                        <label for="date" class="formbold-form-label"> Fecha de Nacimiento </label>
-                        <input
-                        type="date"
-                        name="date"
-                        id="date"
-                        class="formbold-form-input"
-                        />
-                    </div>
-                    </div>
-                    <!-- <div class="w-full sm:w-half formbold-px-3">
-                    <div class="formbold-mb-5">
-                        <label for="time" class="formbold-form-label"> Time </label>
-                        <input
-                        type="time"
-                        name="time"
-                        id="time"
-                        class="formbold-form-input"
-                        />
-                    </div>
-                    </div> -->
-                </div>
+    <!-- Fila 1 -->
+    <div class="col-md-3">
+      <label for="documento" class="form-label">Documento *</label>
+      <input type="number" class="form-control" id="documento">
+    </div>
+    <div class="col-md-3">
+      <label for="cuil" class="form-label">CUIL</label>
+      <input type="text" class="form-control" id="cuil">
+    </div>
+    <div class="col-md-3">
+      <label for="nombre" class="form-label">Nombre *</label>
+      <input type="text" class="form-control" id="nombre">
+    </div>
+    <div class="col-md-3">
+      <label for="apellido" class="form-label">Apellido *</label>
+      <input type="text" class="form-control" id="apellido">
+    </div>
 
-                <div class="formbold-mb-5 formbold-pt-3">
-                    <label class="formbold-form-label formbold-form-label-2">
-                    Obra Social
-                    </label>
-                    <div class="flex flex-wrap formbold--mx-3">
-                    <div class="w-full sm:w-half formbold-px-3">
-                        <div class="formbold-mb-5">
-                        <input
-                            type="text"
-                            name="area"
-                            id="area"
-                            placeholder="Enter area"
-                            class="formbold-form-input"
-                        />
-                        </div>
-                    </div>
-                    <div class="w-full sm:w-half formbold-px-3">
-                        <div class="formbold-mb-5">
-                        <input
-                            type="text"
-                            name="city"
-                            id="city"
-                            placeholder="Enter city"
-                            class="formbold-form-input"
-                        />
-                        </div>
-                    </div>
-                    <div class="w-full sm:w-half formbold-px-3">
-                        <div class="formbold-mb-5">
-                        <input
-                            type="text"
-                            name="state"
-                            id="state"
-                            placeholder="Enter state"
-                            class="formbold-form-input"
-                        />
-                        </div>
-                    </div>
-                    <div class="w-full sm:w-half formbold-px-3">
-                        <div class="formbold-mb-5">
-                        <input
-                            type="text"
-                            name="post-code"
-                            id="post-code"
-                            placeholder="Post Code"
-                            class="formbold-form-input"
-                        />
-                        </div>
-                    </div>
-                    </div>
-                </div>
+    <!-- Fila 2 -->
+    <div class="col-md-3">
+      <label for="sexo" class="form-label">Sexo</label>
+      <select id="sexo" class="form-select">
+        <option selected>Seleccionar...</option>
+        <option>Femenino</option>
+        <option>Masculino</option>
+      </select>
+    </div>
+    <div class="col-md-3">
+      <label for="fecha" class="form-label">Fecha Nacimiento *</label>
+      <input type="date" class="form-control" id="fecha">
+    </div>
+    <div class="col-md-3">
+      <label for="estadoCivil" class="form-label">Estado Civil</label>
+      <select id="estadoCivil" class="form-select">
+        <option selected>Seleccionar...</option>
+        <option>Soltero/a</option>
+        <option>Casado/a</option>
+      </select>
+    </div>
+    <div class="col-md-3">
+      <label for="provincia" class="form-label">Provincia</label>
+      <select id="provincia" class="form-select">
+        <option selected>Seleccionar...</option>
+        <option>San Juan</option>
+        <option>Mendoza</option>
+      </select>
+    </div>
 
-                <div>
-                    <button class="formbold-btn">Agregar</button>
-                </div>
-                </form>
-            </div>
-            </div>
+    <!-- Fila 3 -->
+    <div class="col-md-3">
+      <label for="departamento" class="form-label">Departamento</label>
+      <select id="departamento" class="form-select">
+        <option selected>Seleccionar...</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label for="domicilio" class="form-label">Domicilio</label>
+      <input type="text" class="form-control" id="domicilio">
+    </div>
+    <div class="col-md-2">
+      <label for="codigoPostal" class="form-label">Código Postal</label>
+      <input type="text" class="form-control" id="codigoPostal">
+    </div>
+    <div class="col-md-3">
+      <label for="telefonoMovil" class="form-label">Teléfono Móvil</label>
+      <input type="number" class="form-control" id="telefonoMovil">
+    </div>
+
+    <!-- Fila 4 -->
+    <div class="col-md-3">
+      <label for="telefonoFijo" class="form-label">Teléfono Fijo</label>
+      <input type="number" class="form-control" id="telefonoFijo">
+    </div>
+    <div class="col-md-3">
+      <label for="email" class="form-label">E-Mail</label>
+      <input type="email" class="form-control" id="email">
+    </div>
+
+    <!-- Botón -->
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Guardar</button>
+    </div>
+  </form>
+</div>
+
 
 
 
