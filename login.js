@@ -31,7 +31,7 @@
             // ✅ Login correcto
             localStorage.setItem("token", data.token);
             // redirigir a la siguiente página
-            window.location.href = "medicos.html";
+            window.location.href = "index.html";
           } else {
             // ❌ Credenciales incorrectas
             alert("Usuario o contraseña incorrectos");
