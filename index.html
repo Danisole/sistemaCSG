@@ -11,47 +11,32 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand " href="#"><img class="w-50" src="/img/logo-clinica-letras.png" alt="logo"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="#">
+          <img class="w-50" src="/img/logo-clinica-letras.png" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+          aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Turnos</a>
-            </li>
-
-             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Pacientes
-              </a>
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" href="#">Turnos</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Pacientes</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="pacientes.html">Admin. Pacientes</a></li>
                 <li><a class="dropdown-item" href="turnos_pacientes.html">Turnos del Paciente</a></li>
               </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="prestadores.html">Prestadores</a>
-            </li>
-             <li class="nav-item">
-              <a class="nav-link" href="#">Servicios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="login.html">Login</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="prestadores.html">Prestadores</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
           </ul>
-          <div class="ms-auto">
-            <ul class="navbar-nav ">
-              <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa-solid fa-user"></i></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" onclick="logout()">Cerrar sesión</a>
-              </li>
-            </ul>
 
-            
-
+          <div class="ms-auto d-flex align-items-center">
+            <button id="logoutBtn" class="btn btn-outline-danger btn-sm">
+              <i class="fas fa-sign-out-alt"></i> Cerrar sesión
+            </button>
           </div>
         </div>
       </div>
@@ -89,20 +74,16 @@
 <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
     <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script>
-    // Redirige al login si no hay token
-    const token = localStorage.getItem("token");
-      if (!token) {
-        window.location.href = "login.html";
-      }
+        // Verifica si hay token antes de entrar
+        const token = localStorage.getItem("token");
+        if (!token) {
+          window.location.href = "login.html";
+        }
+      </script>
 
-      // Permite cerrar sesión
-      function logout() {
-        localStorage.removeItem("token");
-        window.location.href = "login.html";
-      }
-    </script>
 
   </body>
 </html>

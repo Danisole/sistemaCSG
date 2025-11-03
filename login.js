@@ -4,6 +4,7 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
   const username = document.getElementById("username").value.trim();
   const password = document.getElementById("password").value.trim();
 
+  // 🧩 Validación de campos
   if (!username || !password) {
     Swal.fire({
       icon: "warning",
@@ -13,7 +14,7 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
     return;
   }
 
-  // 🔐 Simulación local para pruebas sin API (admin / 123)
+  // 🧪 Login de prueba local
   if (username === "admin" && password === "123") {
     localStorage.setItem("token", "token_de_prueba_123");
     Swal.fire({
@@ -27,7 +28,6 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
     return;
   }
 
-  // 🌐 Petición real a la API
   try {
     Swal.fire({
       title: "Verificando...",
@@ -45,6 +45,8 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
 
     if (response.ok) {
       const data = await response.json();
+
+      // Guarda token
       localStorage.setItem("token", data.token);
 
       Swal.fire({
@@ -58,8 +60,8 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
     } else {
       Swal.fire({
         icon: "error",
-        title: "Error de inicio de sesión",
-        text: "Usuario o contraseña incorrectos."
+        title: "Credenciales incorrectas",
+        text: "Usuario o contraseña inválidos."
       });
     }
   } catch (error) {
@@ -67,7 +69,7 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
     Swal.fire({
       icon: "error",
       title: "Error de conexión",
-      text: "No se pudo conectar con el servidor. Puede estar bloqueado por CORS."
+      text: "No se pudo conectar con el servidor. (CORS o red)."
     });
   }
 });
