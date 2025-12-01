@@ -262,3 +262,8 @@
       color: red;
     }
  
+	body { background: #f5f6fa; }
+        .card { border-radius: 12px; }
+        .title { font-size: 1.4rem; font-weight: 600; }
+        .btn-lg { padding: 12px 20px; font-size: 1.1rem; }
+        .hidden { display: none; }
